@@ -1,0 +1,181 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --second-color: #b9b9b9;
+    --primary-color: #e97777;
+    --black-color: #020101;
+}
+
+body{
+    background-position: center;
+    background-image: url(img.jpg),
+    linear-gradient(black 1%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 70%);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a{
+    color: var(--second-color);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.signUp_container{
+    position: relative;
+    backdrop-filter: blur(-0px);
+    width: 310px;
+    border: 2px solid var(--primary-color);
+    padding: 7.5em 2.5em 4em 2.5em;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 2px rgba(17, 0, 0, 0.932);
+    color: var(--second-color);
+}
+
+.signUp_tittle{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    display: flex;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    background-color: var(--primary-color);
+    border-radius: 0 0 20px 20px;
+    height: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.signUp_tittle span{
+    color: var(--black-color);
+    font-size: 30px;
+    font-style: italic;
+}
+
+.signUp_tittle::before{
+    content: "";
+    top: 0;
+    left: -30px;
+    position: absolute;
+    border-top-right-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-shadow: 15px 0 0 0 var(--primary-color);
+    background: transparent;
+}
+
+.signUp_tittle::after{
+    content: "";
+    top: 0;
+    position: absolute;
+    height: 30px;
+    right: -30px;
+    width: 30px;
+    background: transparent;
+    border-top-left-radius: 50%;
+    box-shadow: -15px 0 0 0 var(--primary-color);
+}
+
+.input_wrapper{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    margin: 20px 0;
+}
+
+.input_field{
+    width: 220px;
+    font-size: 10px;
+    height: 40px;
+    color: var(--second-color);
+    background: transparent;
+    padding-inline: 20px 54px;
+    border-radius: 30px;
+    border: 2px solid var(--primary-color);
+    outline: none;
+}
+
+#user{
+    margin-bottom: 3px;
+}
+
+.label{
+    position: absolute;
+    transition: 0.2s;
+    top: 15px;
+    left: 20px;
+}
+
+.input_field:focus ~ .label,
+.input_field:valid .label{
+    position: relative;
+    font-size: 12px;
+    top: -10px;
+    left: 20px;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    border-radius: 30px;
+    padding: 0 10px;
+}
+
+.icon{
+    position: absolute;
+    font-size: 20px;
+    top: 13px; 
+    right: 60px;
+}
+
+.remeber{
+    display: flex;
+    font-size: 15px;
+}
+
+.input-submit{
+    background: #b88a8a;
+    width: 100%;
+    height: 50px;
+    font-style: italic;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500px;
+    border: none;
+    transition: 0.3s;
+}
+
+.input-submit:hover{
+    background: var(--second-color);
+}
+
+.signUp a{
+    font-weight: 450;
+}
+
+@media only screen and (max-width: 564px){
+    .container{
+        padding: 20px;
+    }
+
+    .signUp_container{
+        padding: 7.5em 1.5em 4em 1.5em;
+    }
+}
